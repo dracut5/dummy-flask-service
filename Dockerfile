@@ -1,6 +1,6 @@
 FROM python:3.7.4-alpine3.10
 
-RUN pip install --no-cache-dir flask
+RUN apk add --no-cache curl netcat-openbsd && pip install --no-cache-dir flask
 
 COPY main.py /main.py
 
